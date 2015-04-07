@@ -8,6 +8,7 @@
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
+	use Facebook\GraphUser;
 	const APPID ="1417569068549934";
 	const APPSECRET = "027ef6af87b24d8c717c3edafa837e93";
 
