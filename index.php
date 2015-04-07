@@ -14,6 +14,16 @@
 	FacebookSession::setDefaultApplication(APPID, APPSECRET);
 	$helper = new FacebookRedirectLoginHelper('https://projetesgifacebook.herokuapp.com/');
 	$loginUrl = $helper->getLoginUrl();
+
+	if( isset($_SESSION) && isset($_SESSION['fb_token']))
+	{
+		$session = $_SESSION['fb_token'];
+	}
+	else
+	{
+		$session = $helper->getSessionFromRedirect();
+		
+	}
 	
 
 ?>
@@ -50,6 +60,31 @@
 			data-width="450"
 			data-show-faces="true">
 		</div>
-		<a href='<?php echo $loginUrl; ?>'> ici </a>
+		
+
+
+		<?php 
+
+			
+
+			
+
+			if($session){
+				$_SESSION['fb_token'] = (string) $session->getAccessToken();
+			}
+			else{
+				$loginUrl = $helper->getLoginUrl();
+				echo "<a href='".$loginUrl."'> Se Connecter </a>";
+			}
+
+			
+
+
+		?>
+
+
+
+
+
 	</body>
 </html>
