@@ -29,6 +29,12 @@ const APPSECRET = "027ef6af87b24d8c717c3edafa837e93";
 		   }(document, 'script', 'facebook-jssdk'));
 		</script>
    		<h1>Ma page</h1>
+   		<div
+			class="fb-like"
+			data-share="true"
+			data-width="450"
+			data-show-faces="true">
+		</div>
 
 	</body>
 </html>
