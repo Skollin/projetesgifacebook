@@ -1,6 +1,17 @@
 <?php
-const APPID ="1417569068549934";
-const APPSECRET = "027ef6af87b24d8c717c3edafa837e93"; 
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+session_start();
+	const APPID ="1417569068549934";
+	const APPSECRET = "027ef6af87b24d8c717c3edafa837e93"; 
+	require "facebook-php-sdk-v4-4.0-dev/autoload.php";
+	use Facebook\FacebookSession;
+	use Facebook\FacebookRedirectLoginHelper;
+	FacebookSession::setDefaultApplication(APPID, APPSECRET);
+	$helper = new FacebookRedirectLoginHelper('https://projetesgifacebook.herokuapp.com/');
+	$loginUrl = $helper->getLoginUrl();
+	echo $loginUrl;
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +25,7 @@ const APPSECRET = "027ef6af87b24d8c717c3edafa837e93";
 		<script>
 		  window.fbAsyncInit = function() {
 		    FB.init({
-		      appId      : '1417569068549934',
+		      appId      : '<php echo APPID; ?>',
 		      xfbml      : true,
 		      version    : 'v2.3'
 		    });
