@@ -24,7 +24,7 @@ const APPSECRET = "027ef6af87b24d8c717c3edafa837e93";
 		     var js, fjs = d.getElementsByTagName(s)[0];
 		     if (d.getElementById(id)) {return;}
 		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     js.src = "//connect.facebook.net/fr_FR/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
 		</script>
