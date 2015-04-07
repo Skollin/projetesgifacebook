@@ -7,7 +7,7 @@
 	require "facebook-php-sdk-v4-4.0-dev/autoload.php";
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRedirectLoginHelper;
-
+	use Facebook\FacebookRequest;
 	const APPID ="1417569068549934";
 	const APPSECRET = "027ef6af87b24d8c717c3edafa837e93";
 
