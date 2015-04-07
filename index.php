@@ -73,7 +73,7 @@
 				$request_user_executed = $request_user->execute();
 				$user = $request_user_executed->getGraphObject(GraphUser::className());
 				echo "Yop yop ".$user->getName();
-				var_dump($user);
+				// var_dump($user);
 			}
 			else{
 				$loginUrl = $helper->getLoginUrl();
