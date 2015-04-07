@@ -50,6 +50,6 @@
 			data-width="450"
 			data-show-faces="true">
 		</div>
-		<a href='<?php echo $loginUrl; ?>'>
+		<a href='<?php echo $loginUrl; ?>'> ici </a>
 	</body>
 </html>
