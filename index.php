@@ -53,7 +53,9 @@
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
 		</script>
+   		
    		<h1>Ma page</h1>
+   		
    		<div
 			class="fb-like"
 			data-share="true"
@@ -66,7 +68,13 @@
 		<?php 
 			if($session){
 				$_SESSION['fb_token'] = (string)$session->getAccessToken();
-				var_dump($session);
+				
+				$request_user = new FacebookRequest($session,"GET","/me");
+				$request_user_executed = $request_user->execute();
+				$user = $request_user_executed->getGraphObject(GraphUser::className());
+				var_dump($user);
+
+
 			}
 			else{
 				$loginUrl = $helper->getLoginUrl();
