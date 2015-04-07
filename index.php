@@ -64,13 +64,9 @@
 
 
 		<?php 
-
-			
-
-			
-
 			if($session){
-				$_SESSION['fb_token'] = (string) $session->getAccessToken();
+				$_SESSION['fb_token'] = (string)$session->getAccessToken();
+				var_dump($session);
 			}
 			else{
 				$loginUrl = $helper->getLoginUrl();
